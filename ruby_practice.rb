@@ -1,4 +1,4 @@
-## No.1
+# No.1
 num = rand(1..15)
 if num > 10
   puts "large"
