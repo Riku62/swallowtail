@@ -157,6 +157,7 @@ def duplicate_ascender(array)
   array.select{|a| array.count(a) > 1}.uniq.sort
 end
 
+
 # No.23
 def duplicate_hash(array)
   array1 = array.select{|a| array.count(a) > 2}.sort
