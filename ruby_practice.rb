@@ -30,12 +30,12 @@ puts b
 end
 
 # No.5
-n = 10
 def pyramid(n)
-  for i in 1..n
-     puts "*" * i
+  1.upto(n) do |i|
+    puts "*" * i
   end
 end
+
 
 # No.6
 a = 1
@@ -51,7 +51,7 @@ end
 # No.8
 array = [1, 2, 3, 4, 5]
 num = 6
-if !(array.include?(num))
+unless array.include?(num)
   array << num
 end
 p array
@@ -69,7 +69,7 @@ end
 puts plus(array1)
 
 # No.10
-array1 = [1,2,3,4,5]
+array1 = [1, 2, 3, 4, 5]
 def average(array)
   sum = 0
   array.each do |num|
@@ -82,15 +82,15 @@ puts average(array1)
 # No.11
 def total(array)
   sum = 0
-  array1 = []
+  return_array = []
   array.each do |num|
     sum += num
-    array1 << num
+    return_array << num
     if sum > 15
       break
     end
   end
-  array1
+  return_array
 end
 
 
@@ -116,7 +116,7 @@ end
 
 
 # No.17
-for i in 1..100
+1.upto(100) do |i|
   if i % 3 == 0 && i % 5 == 0
     puts "FizzBuzz"
   elsif i % 3 == 0
@@ -130,7 +130,7 @@ end
 
 # No.18
 a1 = [1, 2, 3]
-a2 = a1.map{|n| n * 3}
+a2 = a1.map { |n| n * 3}
 #　mapを使って記述
 
 # No.19
@@ -163,7 +163,6 @@ end
 # No.23
 def duplicate_number_hash(array)
   array1 = array.select{|a| array.count(a) > 1}.sort
-  p array1
   k = Hash.new(0)
   array1.each do |num|
     k[num] = array1.count(num)
